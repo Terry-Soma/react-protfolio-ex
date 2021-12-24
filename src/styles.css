@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothin: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background: #ebecf0;
+}
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.flex-with-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.n-box1 {
+  background: linear-gradient(145deg, #00101d, #001322);
+  box-shadow: 5px 5px 0px #00070d, -5px -5px 0px #00f829de;
+}
+
+.n-box2 {
+  border-radius: 50px;
+  background: #ebecf0;
+  box-shadow: 5px 5px 0px #cacbce, -5px -5px 0px #fff;
+}
+
+.white {
+  color: #fff;
+}

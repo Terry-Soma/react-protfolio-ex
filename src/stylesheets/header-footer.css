@@ -1,0 +1,126 @@
+.menu-icon {
+  color: #00f829de;
+  font-size: 64px;
+  margin: 16px;
+  z-index: 3;
+  cursor: pointer;
+}
+.active {
+  border: 2px solid cyan;
+  padding: 8px;
+  border-radius: 8px;
+}
+.active a {
+  color: cyan;
+  font-weight: bold;
+}
+.show-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #001220af;
+  opacity: 0.88;
+  top: 0;
+  right: 0;
+  height: 64vh;
+  width: 50%;
+  border-bottom-left-radius: 50%;
+  transition: all 0.5s;
+  z-index: 2;
+}
+.hide-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.show-header li {
+  list-style: none;
+  margin-top: 24px;
+  color: white;
+}
+.show-header li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact {
+  padding-top: 50px;
+}
+.contact img {
+  height: 50vh;
+  width: 100%;
+}
+input,
+textarea {
+  margin-top: 24px;
+  border: none !important;
+  background: #ebecf0 !important;
+  box-shadow: 5px 5px 0px #cacbce, -5px -5px 0px #fff !important;
+  border-radius: 24px !important;
+}
+
+.form-control:focus {
+  transform: scale(1.02);
+}
+.form-control {
+  box-shadow: none;
+}
+.contact button {
+  background: rgba(0, 0, 255, 0.8);
+  color: white;
+  font-weight: bold;
+}
+
+.footer-content {
+  background-color: #001220;
+  text-align: center;
+  color: #fff;
+}
+
+.footer svg {
+  color: white;
+}
+.footer-icons:hover {
+  color: cyan;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .show-header {
+    height: 100vh;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-left: 4px solid rgba(255, 255, 255, 0.48);
+    transition: width 0.5s;
+  }
+  .hide-header {
+    transition: all 0s;
+  }
+  .menu-icon {
+    font-size: 32px;
+  }
+  .contact {
+    margin-top: 0;
+    padding: 0;
+  }
+  .contact-form {
+    padding: 15px;
+    margin: 15px;
+  }
+}

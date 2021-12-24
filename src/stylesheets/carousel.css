@@ -1,0 +1,62 @@
+.carousel-parent {
+  height: 100vh;
+  background: #001220;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  height: 240px;
+  width: 240px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: gallery 20s linear infinite;
+}
+.gallery:hover {
+  animation-play-state: paused;
+}
+
+.gallery:hover svg {
+  opacity: 0.2;
+}
+
+.gallery span {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotatey(calc(var(--i) * 60deg)) translateZ(400px);
+  transition: all 1s;
+}
+
+.gallery span svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: all 1s;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.168));
+}
+.gallery span svg:hover {
+  cursor: pointer;
+  transition: all 1s;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@keyframes gallery {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
